@@ -12,7 +12,6 @@ if not (hookfunction and require) then
     return error(err);
 end;
 
-local RF: ReplicatedFirst = cloneref(game:GetService("ReplicatedFirst"));
 local Players: Players = cloneref(game:GetService("Players"));
 local UIS: UserInputService = cloneref(game:GetService("UserInputService"));
 
@@ -26,7 +25,7 @@ end;
 
 local s, cf = pcall(require, plr.PlayerGui.GameUI.ClientMaster.CommonFunctions);
 if not s then
-    return warn(executor .. " returned an error while trying to require RF.Modules.Client.Utilities.Raycast:\n" .. cf);
+    return warn(executor .. " returned an error while trying to require plr.PlayerGui.GameUI.ClientMaster.CommonFunctions:\n" .. cf);
 end;
 
 local isVisible = function(part: BasePart, origin: Vector3): (boolean, Instance?)
