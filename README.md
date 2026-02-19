@@ -1,2 +1,2 @@
 # Knife-Ability-Test-Silent-Aim-Script
-This is a basic silent aim with no UI for https://www.roblox.com/games/111163066268338/Knife-Ability-Test.  Please note that your executor must at least support hookfunction and require.
+This script is open-source and free. Anyone can modify/use this script without restrictions. You can also view this script over at [scriptblox.com](https://scriptblox.com/script/Knife-Ability-Test-2X-Silent-Aim-Keyless-113545) or [haxhell.com](https://haxhell.com/scripts/knife-ability-test-2x-knife-ability-test-silent-aim-keyless) or [rscripts.net](https://rscripts.net/script/knife-ability-test-silent-aim-keyless-TMNx).
