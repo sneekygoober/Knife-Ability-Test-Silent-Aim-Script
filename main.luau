@@ -49,7 +49,7 @@ local isVisible = function(part: BasePart, origin: Vector3): (boolean, Instance?
 end;
 
 local getTarget = function(origin: Vector3)
-    local cPart, cDistance = nil, math.huge;
+    local cPart, cDistance = nil, getgenv().fov or 300;
 
     for _, player: Player in next, Players:GetPlayers() do
         if player == plr then continue; end;
@@ -80,6 +80,8 @@ local getTarget = function(origin: Vector3)
 
     return cPart;
 end;
+
+loadstring(game:HttpGet("https://raw.githubusercontent.com/sneekygoober/sneeky-s-fov-lib/refs/heads/main/main.luau"))()(getgenv().fov or 300, getTarget);
 
 local old; old = clonefunction(hookfunction(rawget(cf, "RayCast"), newcclosure(function(origin, _, ...)
     local c = getTarget(origin);
