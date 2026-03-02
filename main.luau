@@ -28,14 +28,15 @@ if not s then
     return warn(executor .. " returned an error while trying to require plr.PlayerGui.GameUI.ClientMaster.CommonFunctions:\n" .. cf);
 end;
 
+local rp = RaycastParams.new();
+rp.FilterType = Enum.RaycastFilterType.Exclude;
+rp.IgnoreWater = true;
+
 local isVisible = function(part: BasePart, origin: Vector3): (boolean, Instance?)
     local char = plr.Character;
     if not (char and part) then return false, nil; end;
 
-    local rp = RaycastParams.new();
-    rp.FilterType = Enum.RaycastFilterType.Exclude;
     rp.FilterDescendantsInstances = {char};
-    rp.IgnoreWater = true;
 
     local dir = part.Position - origin;
     local result: RaycastResult = workspace:Raycast(origin, dir, rp);
